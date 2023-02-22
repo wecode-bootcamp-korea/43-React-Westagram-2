@@ -1,5 +1,5 @@
 import React from "react";
-import "../LoginKeonrok/LoginKeonrok.scss";
+import "./LoginKeonrok.scss";
 
 const LoginKeonrok = () => {
   return <div className="LoginKeonrok">LoginKeonrok</div>;

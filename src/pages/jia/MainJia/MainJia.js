@@ -1,5 +1,5 @@
 import React from "react";
-import "../MainJia/MainJia.scss";
+import "./MainJia.scss";
 
 const MainJia = () => {
   return <div className="MainJia">MainJia</div>;

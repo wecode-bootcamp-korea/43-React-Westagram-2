@@ -1,5 +1,5 @@
 import React from "react";
-import "../LoginJunyoung/LoginJunyoung.scss";
+import "./LoginJunyoung.scss";
 
 const LoginJunyoung = () => {
   return <div className="LoginJunyoung">LoginJunyoung</div>;
