@@ -1,5 +1,5 @@
 import React from "react";
-import "../Nav/Nav.scss";
+import "./Nav.scss";
 
 const Nav = () => {
   return <div className="Nav">Nav</div>;
