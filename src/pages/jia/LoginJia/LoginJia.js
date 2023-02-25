@@ -1,8 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./LoginJia.scss";
 
 const LoginJia = () => {
+  const [id, setId] = useState("");
+  const [pw, setPw] = useState("");
+
+  const saveUserId = e => {
+    setId(e.target.value);
+  };
+
+  const saveUserPw = e => {
+    setPw(e.target.value);
+  };
+
   return (
     <div className="LoginJia">
       <div className="body">
@@ -14,13 +25,15 @@ const LoginJia = () => {
                 className="idInput"
                 type="text"
                 placeholder="전화번호, 사용자 이름 또는 이메일"
-                name="id"
+                value={id}
+                onChange={saveUserId}
               />
               <input
                 className="pwInput"
                 type="password"
                 placeholder="비밀번호"
-                name="password"
+                value={pw}
+                onChange={saveUserPw}
               />
             </div>
 
