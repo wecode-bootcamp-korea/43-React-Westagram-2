@@ -1,10 +1,13 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./LoginJia.scss";
 
 const LoginJia = () => {
   const [id, setId] = useState("");
   const [pw, setPw] = useState("");
+  const [isDisabled, setIsDisabled] = useState(false);
+
+  const navigate = useNavigate();
 
   const saveUserId = e => {
     setId(e.target.value);
@@ -14,13 +17,25 @@ const LoginJia = () => {
     setPw(e.target.value);
   };
 
+  const handleDisabled = () => {
+    alert("아이디 혹은 패스워드를 확인해주세요.");
+    setIsDisabled(true);
+  };
+
+  const checkAccount = e => {
+    e.key === "Enter" &&
+      (id.includes("@") && pw.length >= 5
+        ? navigate("/main-jia")
+        : handleDisabled());
+  };
+
   return (
     <div className="LoginJia">
       <div className="body">
         <div className="layout">
           <h1 className="loginLogo">westagram</h1>
           <div className="loginBox">
-            <div className="loginInput">
+            <div className="loginInput" onKeyUp={checkAccount}>
               <input
                 className="idInput"
                 type="text"
@@ -38,7 +53,14 @@ const LoginJia = () => {
             </div>
 
             <div className="loginBtnBox">
-              <button className="loginBtn">로그인</button>
+              <button
+                onChange={() => {
+                  setIsDisabled(!isDisabled);
+                }}
+                className={`loginBtn ${id && pw ? "disabled" : "active"}`}
+              >
+                로그인
+              </button>
             </div>
           </div>
           <Link>

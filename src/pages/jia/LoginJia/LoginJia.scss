@@ -107,6 +107,14 @@ button {
     font-weight: 500;
   }
 
+  .disabled {
+    background-color: #c5e1fa;
+  }
+
+  .active {
+    background-color: #5395e9;
+  }
+
   a {
     text-decoration: none;
   }
