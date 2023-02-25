@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 
-import CommentJia from "./CommentJia";
+import CommentJia from "../CommentJia/CommentJia";
 import "./ArticleJia.scss";
 
 import SeaImg from "../../assetsJia/MainJia/sea.png";
@@ -32,38 +32,25 @@ const ArticleJia = () => {
             <i className="fa-regular fa-bookmark" />
           </div>
           <div className="feedsLike">
-            <strong>animal_love</strong>
+            <span className="strong">animal_love</span>
             <span>님 </span>
-            <strong>
-              외 <strong className="feedsLikeNumber">70</strong>명
-            </strong>
+            <span className="strong">
+              외 <span className="feedsLikeNumber">70</span>명
+            </span>
             이 좋아합니다
           </div>
           <div className="feedsContentBox">
             <Link to="">
-              <strong>photo_stagram </strong>
+              <span className="strong">photo_stagram </span>
             </Link>
-            동해 바다의 윤슬...
-            <Link to="">더보기</Link>
+            🌊✨ 동해 바다의 윤슬...
+            <Link to=""> 더보기</Link>
+            <div className="feedsMoreComments">
+              <Link className="feedsMoreCommentsText">댓글 15개 모두 보기</Link>
+            </div>
           </div>
 
-          <div className="feedsCommentBox">
-            <div className="feedsOldComment">
-              <div>
-                <Link>
-                  <strong>fullmoon_e </strong>윤슬이 예쁘네요!
-                </Link>
-                <i className="fa-regular fa-heart icon-mini" />
-              </div>
-            </div>
-            <div className="feedsNewComment">
-              <CommentJia />
-            </div>
-          </div>
-        </div>
-        <div className="feedsCommentInputBox">
-          <input className="feedsCommentInput" placeholder="댓글 달기..." />
-          <button className="feedsCommentUpload">게시</button>
+          <CommentJia />
         </div>
       </article>
     </div>
@@ -71,13 +58,3 @@ const ArticleJia = () => {
 };
 
 export default ArticleJia;
-
-//map test
-// const numbers = ["dazezd_z ", "comment"];
-// const listItems = numbers.map((numbers, index) => (
-//   <span key={index}>{numbers}</span>
-// ));
-
-// const handleComment = e => {
-//   e.key === "Enter" ? console.log("enter") : console.log("fail");
-// };

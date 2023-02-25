@@ -26,7 +26,6 @@ const LoginJia = e => {
       ? navigate("/main-jia")
       : handleDisabled();
   };
-
   return (
     <div className="LoginJia">
       <div className="body">
