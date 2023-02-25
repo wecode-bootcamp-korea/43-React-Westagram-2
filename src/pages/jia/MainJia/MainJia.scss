@@ -1,0 +1,54 @@
+@import "../../../styles/reset.scss";
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+
+// Common
+body {
+  background-color: white;
+}
+
+strong {
+  font-weight: 700;
+}
+
+img {
+  width: 100px;
+  height: 100px;
+}
+
+.body {
+  display: flex;
+  margin: 0 auto;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+i,
+img,
+button {
+  cursor: pointer;
+}
+
+.fa-regular.icon-mini {
+  font-size: 10px;
+  color: gray;
+}
+
+// Main
+.mainBox {
+  display: flex;
+  position: absolute;
+  top: 20px;
+  left: 450px;
+  padding: 0;
+
+  &::-webkit-scrollbar-x {
+    display: none;
+  }
+
+  .mainLeft {
+    width: 480px;
+  }
+}

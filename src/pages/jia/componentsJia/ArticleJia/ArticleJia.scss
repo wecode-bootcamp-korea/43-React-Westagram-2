@@ -1,0 +1,203 @@
+@import "../../../../styles/reset.scss";
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+
+// Common
+body {
+  background-color: white;
+}
+
+strong {
+  font-weight: 700;
+}
+
+img {
+  width: 100px;
+  height: 100px;
+}
+
+.body {
+  display: flex;
+  margin: 0 auto;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+i,
+img,
+button {
+  cursor: pointer;
+}
+
+.fa-regular.icon-mini {
+  font-size: 10px;
+  color: gray;
+}
+
+// Article
+
+article {
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 2px;
+  border-bottom: 1px solid #e6e6e6;
+  font-size: 15px;
+
+  img {
+    width: 480px;
+    height: 480px;
+    border-radius: 4px;
+  }
+}
+
+.feedsUpside {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+
+  .feedsUpsideLeft {
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 30px;
+      height: 30px;
+      margin-right: 5px;
+      border: 1px solid #bababa;
+      border-radius: 50%;
+    }
+
+    .feedsNickname {
+      margin-right: 10px;
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    .feedsContentTime {
+      color: #bababa;
+      font-size: 14px;
+    }
+  }
+}
+
+.feedsBottom {
+  padding: 10px 10px 0 10px;
+
+  .feedsIcon {
+    display: flex;
+    justify-content: space-between;
+
+    .feedsIconLeft {
+      font-size: 22px;
+
+      .icon-chat {
+        margin: 0 14px;
+      }
+    }
+
+    .fa-bookmark {
+      font-size: 22px;
+    }
+  }
+
+  .feedsLike {
+    margin-top: 10px;
+    font-size: 14px;
+    margin-bottom: 10px;
+
+    span {
+      font-weight: normal;
+    }
+  }
+}
+
+.feedsContentBox {
+  font-size: 14px;
+}
+
+.feedsCommentBox {
+  font-size: 14px;
+  .feedsOldComment {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5px;
+    width: 100%;
+
+    div:first-child {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .feedsOldCommentMore {
+      color: gray;
+      font-size: 14px;
+      font-weight: 400;
+      margin-top: 10px;
+    }
+
+    .heart-icon-mini {
+      width: 10px;
+      height: 10px;
+    }
+  }
+
+  .feedsNewComment {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+.feedsCommentInputBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+  padding: 0 10px 10px 0;
+  color: #bababa;
+  font-size: 14px;
+
+  .feedsCommentInput {
+    width: 90%;
+    background-color: white;
+    border: none;
+    font-size: 14px;
+    margin: 0;
+
+    &::placeholder {
+      color: gray;
+      text-align: left;
+    }
+  }
+
+  .feedsCommentUpload {
+    width: 10%;
+    color: #5395e9;
+    background-color: transparent;
+    border: none;
+  }
+}
+
+input {
+  width: 180px;
+  height: 20px;
+  padding-left: 10px;
+  background-color: #fafafa;
+  border: none;
+  border-radius: 4px;
+
+  &::placeholder {
+    color: #bababa;
+    text-align: center;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}

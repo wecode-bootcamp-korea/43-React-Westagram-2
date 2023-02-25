@@ -1,0 +1,67 @@
+@import "../../../../styles/reset.scss";
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+
+// Common
+body {
+  background-color: white;
+}
+
+strong {
+  font-weight: 700;
+}
+
+img {
+  width: 100px;
+  height: 100px;
+}
+
+.body {
+  display: flex;
+  margin: 0 auto;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+i,
+img,
+button {
+  cursor: pointer;
+}
+
+.fa-regular.icon-mini {
+  font-size: 10px;
+  color: gray;
+}
+
+// Story
+header {
+  display: flex;
+  margin-bottom: 20px;
+  gap: 15px;
+  overflow: scroll;
+
+  img {
+    width: 60px;
+    height: 60px;
+    border: 2px solid white;
+    border-radius: 50%;
+  }
+
+  div {
+    width: 64px;
+    height: 64px;
+    border: 2px solid transparent;
+    background-image: linear-gradient(#fff, #fff),
+      linear-gradient(to right, red 0%, orange 100%);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    border-radius: 50%;
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

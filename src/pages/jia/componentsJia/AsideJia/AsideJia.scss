@@ -1,0 +1,172 @@
+@import "../../../../styles/reset.scss";
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+
+// Common
+body {
+  background-color: white;
+}
+
+strong {
+  font-weight: 700;
+}
+
+img {
+  width: 100px;
+  height: 100px;
+}
+
+.body {
+  display: flex;
+  margin: 0 auto;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+i,
+img,
+button {
+  cursor: pointer;
+}
+
+.fa-regular.icon-mini {
+  font-size: 10px;
+  color: gray;
+}
+
+// Aside
+@media (max-width: 1350px) {
+  .AsideJia {
+    display: none;
+  }
+}
+
+.AsideJia {
+  position: fixed;
+  top: 25px;
+  right: 20px;
+  width: 340px;
+  background-color: white;
+}
+
+.profileBox {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  border-radius: 2px;
+  font-size: 15px;
+  font-weight: 700;
+
+  img {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    border: 2px solid white;
+  }
+
+  .profileBoxNickname {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    color: gray;
+    font-size: 12px;
+    font-weight: 600;
+
+    a {
+      font-size: 16px;
+      font-weight: 700;
+    }
+  }
+}
+
+.recommendBox {
+  height: 250px;
+  margin: 25px 10px 38px 10px;
+  border: none;
+  font-size: 12px;
+  font-weight: 600;
+  overflow: scroll;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  .recommendUpside {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 320px;
+    color: gray;
+    background-color: white;
+    font-size: 14px;
+  }
+
+  .recommendBottom {
+    margin-top: 30px;
+
+    img {
+      width: 30px;
+      height: 30px;
+      margin-right: 5px;
+      border-radius: 50%;
+      border: 1px solid #e6e6e6;
+    }
+  }
+
+  .recommendIndividual {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 0;
+
+    .recommendIndividualLeft {
+      display: flex;
+
+      img {
+        margin-right: 10px;
+      }
+    }
+
+    .recommendIndividualMiddle {
+      div:nth-child(1) {
+        font-size: 15px;
+      }
+
+      div:nth-child(2) {
+        color: gray;
+        font-size: 12px;
+        font-weight: 400;
+      }
+    }
+
+    .recommendIndividualRight {
+      color: #5395e9;
+    }
+  }
+}
+
+footer {
+  padding-left: 10px;
+  color: #bababa;
+
+  p {
+    margin: 20px 0;
+    font-size: 12px;
+    font-weight: 500;
+  }
+}
+
+// toggle
+
+.profileToggleBox {
+  display: none;
+}
+
+.profileToggleImg {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  border: 1px solid #bababa;
+}

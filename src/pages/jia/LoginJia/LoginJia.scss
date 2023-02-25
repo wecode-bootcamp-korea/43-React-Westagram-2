@@ -1,0 +1,127 @@
+@import "../../../styles/reset.scss";
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+
+// Common
+body {
+  background-color: white;
+}
+
+strong {
+  font-weight: 700;
+}
+
+img {
+  width: 100px;
+  height: 100px;
+}
+
+.body {
+  display: flex;
+  margin: 0 auto;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+i,
+img,
+button {
+  cursor: pointer;
+}
+
+.fa-regular.icon-mini {
+  font-size: 10px;
+  color: gray;
+}
+
+// Login
+.LoginJia {
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fafafa;
+
+  .layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #e6e6e6;
+    width: 400px;
+    height: 450px;
+    background-color: white;
+  }
+
+  .loginLogo {
+    font-family: "Lobster", cursive;
+    margin: 40px 80px;
+    font-size: 60px;
+    color: #262626;
+  }
+
+  .loginInput {
+    display: flex;
+    flex-direction: column;
+  }
+
+  input {
+    margin: 0 auto;
+    width: 250px;
+    background: transparent;
+    background-color: #fafafa;
+    border: 1px solid #f4f4f4;
+    border-radius: 4px;
+    padding: 10px 8px;
+    margin-bottom: 10px;
+    color: #a3a3a3;
+  }
+
+  input::placeholder {
+    text-align: left;
+    color: #a3a3a3;
+    font-size: 14px;
+  }
+
+  input:focus {
+    outline: 1px solid #c5e1fa;
+  }
+
+  .loginBtnBox {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 90px;
+  }
+
+  button {
+    width: 270px;
+    background: transparent;
+    background-color: #c5e1fa;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    padding: 8px 0 8px 0;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  h6 {
+    color: #1e4a77;
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  .active {
+    background-color: #c5e1fa;
+  }
+
+  .disabled {
+    background-color: #5395e9;
+  }
+}
