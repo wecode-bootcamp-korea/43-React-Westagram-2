@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
+import CommentJia from "./CommentJia";
 import "./ArticleJia.scss";
 
 import SeaImg from "../../assetsJia/MainJia/sea.png";
@@ -20,9 +21,7 @@ const ArticleJia = () => {
           </div>
           <i className="fa-solid fa-ellipsis" />
         </div>
-
         <img className="feedsContentPhoto" alt="feeds" src={SeaImg} />
-
         <div className="feedsBottom">
           <div className="feedsIcon">
             <div className="feedsIconLeft">
@@ -47,16 +46,18 @@ const ArticleJia = () => {
             동해 바다의 윤슬...
             <Link to="">더보기</Link>
           </div>
+
           <div className="feedsCommentBox">
             <div className="feedsOldComment">
               <div>
-                <Link to="">
+                <Link>
                   <strong>fullmoon_e </strong>윤슬이 예쁘네요!
                 </Link>
-
                 <i className="fa-regular fa-heart icon-mini" />
               </div>
-              <div className="feedsNewComment" />
+            </div>
+            <div className="feedsNewComment">
+              <CommentJia />
             </div>
           </div>
         </div>
@@ -70,3 +71,13 @@ const ArticleJia = () => {
 };
 
 export default ArticleJia;
+
+//map test
+// const numbers = ["dazezd_z ", "comment"];
+// const listItems = numbers.map((numbers, index) => (
+//   <span key={index}>{numbers}</span>
+// ));
+
+// const handleComment = e => {
+//   e.key === "Enter" ? console.log("enter") : console.log("fail");
+// };

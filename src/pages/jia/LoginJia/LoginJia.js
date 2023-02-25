@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./LoginJia.scss";
 
-const LoginJia = () => {
+const LoginJia = e => {
   const [id, setId] = useState("");
   const [pw, setPw] = useState("");
   const [isDisabled, setIsDisabled] = useState(false);
@@ -21,12 +21,10 @@ const LoginJia = () => {
     alert("아이디 혹은 패스워드를 확인해주세요.");
     setIsDisabled(true);
   };
-
   const checkAccount = e => {
-    e.key === "Enter" &&
-      (id.includes("@") && pw.length >= 5
-        ? navigate("/main-jia")
-        : handleDisabled());
+    id.includes("@") && pw.length >= 5
+      ? navigate("/main-jia")
+      : handleDisabled();
   };
 
   return (
@@ -35,7 +33,12 @@ const LoginJia = () => {
         <div className="layout">
           <h1 className="loginLogo">westagram</h1>
           <div className="loginBox">
-            <div className="loginInput" onKeyUp={checkAccount}>
+            <div
+              className="loginInput"
+              onKeyUp={e => {
+                e.key === "Enter" && checkAccount();
+              }}
+            >
               <input
                 className="idInput"
                 type="text"
@@ -57,6 +60,7 @@ const LoginJia = () => {
                 onChange={() => {
                   setIsDisabled(!isDisabled);
                 }}
+                onClick={checkAccount}
                 className={`loginBtn ${id && pw ? "disabled" : "active"}`}
               >
                 로그인
