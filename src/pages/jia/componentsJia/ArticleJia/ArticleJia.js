@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useRef } from "react";
 import { Link } from "react-router-dom";
 
 import CommentJia from "../CommentJia/CommentJia";
@@ -8,6 +8,33 @@ import SeaImg from "../../assetsJia/MainJia/sea.png";
 import FeedProfileImg from "../../assetsJia/MainJia/profile2.png";
 
 const ArticleJia = () => {
+  const [input, setInput] = useState("");
+  const [comments, setComments] = useState([]);
+  const [nextId, setNextId] = useState(0);
+  const commentInput = useRef("");
+
+  const submit = e => {
+    e.preventDefault();
+    const newComments = comments.concat({
+      id: nextId,
+      text: input,
+    });
+    setNextId(nextId + 1);
+    setComments(newComments);
+    setInput("");
+  };
+
+  const preventReload = e => {
+    setInput(e.target.value);
+  };
+
+  const commentList = comments.map(comment => (
+    <li key={comment.id}>
+      <span>dazezd_z</span>
+      {comment.text}
+    </li>
+  ));
+
   return (
     <div className="ArticleJia">
       <article>
@@ -46,11 +73,28 @@ const ArticleJia = () => {
             🌊✨ 동해 바다의 윤슬...
             <Link to=""> 더보기</Link>
             <div className="feedsMoreComments">
-              <Link className="feedsMoreCommentsText">댓글 15개 모두 보기</Link>
+              <Link className="feedsMoreComments">댓글 15개 모두 보기</Link>
             </div>
           </div>
-
-          <CommentJia />
+          <div className="feedsCommentBox">
+            <div className="feedsNewComment">
+              <CommentJia commentList={commentList} />
+              <form className="feedsCommentInputBox" onSubmit={submit}>
+                <input
+                  className="feedsCommentInput"
+                  name="comment"
+                  type="text"
+                  placeholder="댓글 달기..."
+                  value={input}
+                  onChange={preventReload}
+                  ref={commentInput}
+                />
+                <button className="feedsCommentUpload" type="submit">
+                  게시
+                </button>
+              </form>
+            </div>
+          </div>
         </div>
       </article>
     </div>
