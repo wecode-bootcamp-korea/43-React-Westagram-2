@@ -8,26 +8,35 @@ import SeaImg from "../../assetsJia/MainJia/sea.png";
 import FeedProfileImg from "../../assetsJia/MainJia/profile2.png";
 
 const ArticleJia = () => {
+  // useState 사용하기 전 초기화
   const [input, setInput] = useState("");
   const [comments, setComments] = useState([]);
   const [nextId, setNextId] = useState(0);
   const commentInput = useRef("");
 
-  const submit = e => {
-    e.preventDefault();
-    const newComments = comments.concat({
-      id: nextId,
-      text: input,
-    });
-    setNextId(nextId + 1);
-    setComments(newComments);
-    setInput("");
-  };
+  // events
 
-  const preventReload = e => {
+  // input값 입력 이벤트
+  const onChange = e => {
     setInput(e.target.value);
   };
 
+  // enter / click 이벤트
+  const submit = e => {
+    e.preventDefault(); // 새로고침 방지
+    const newComments = comments.concat({
+      // 기존 리스트와 병합
+      id: nextId,
+      text: input,
+    });
+    setNextId(nextId + 1); // id 값 + 1
+    // 병합한 리스트까지 포함된 리스트로 세팅
+    setComments(newComments);
+    setInput(""); // input 값 비우기
+  };
+
+  // 리스트 화면에 띄우기 (map으로 반복 요소 불러오기)
+  // -> 리스트에 고유 key값 부여
   const commentList = comments.map(comment => (
     <li key={comment.id}>
       <span>dazezd_z</span>
@@ -67,8 +76,8 @@ const ArticleJia = () => {
             이 좋아합니다
           </div>
           <div className="feedsContentBox">
-            <Link to="">
-              <span className="strong">photo_stagram </span>
+            <Link to="" className="strong">
+              photo_stagram
             </Link>
             🌊✨ 동해 바다의 윤슬...
             <Link to=""> 더보기</Link>
@@ -86,8 +95,8 @@ const ArticleJia = () => {
                   type="text"
                   placeholder="댓글 달기..."
                   value={input}
-                  onChange={preventReload}
-                  ref={commentInput}
+                  onChange={onChange}
+                  ref={commentInput} // 원하는 요소에 접근하게 해줌
                 />
                 <button className="feedsCommentUpload" type="submit">
                   게시
