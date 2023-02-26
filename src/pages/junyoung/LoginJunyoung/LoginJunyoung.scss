@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  /* 1번 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(250, 250, 250, 255);
+  /* font-family: "돋움", dotum, sans-serif; */
+
+  /* 2번
+display: grid;
+place-items: center; */
+
+  /*3번
+position: relative 
+부모인 body 에 position을 주고
+wrap_box에 position: absolute를 주는 것*/
+}
+
+.wrapBox {
+  @include center;
+  flex-direction: column;
+  width: 250px;
+  height: 350px;
+  padding: 60px;
+  border: 1px solid #eaeaea;
+  background-color: white;
+  margin: auto;
+  .westagram {
+    margin-bottom: 30px;
+    font-family: "Lobster", cursive;
+    font-size: 40px;
+    text-align: center;
+  }
+  .loginForm {
+    .loginWrap {
+      .loginId {
+        @include center;
+        width: 220px;
+        height: 15px;
+        margin-bottom: 5px;
+        padding: 10px;
+        border: 1px solid #eaeaea;
+        border-radius: 5px;
+        background-color: #fafafa;
+        color: gray;
+        font-size: 12px;
+      }
+      .loginPw {
+        @include center;
+        width: 220px;
+        height: 15px;
+        margin-bottom: 5px;
+        padding: 10px;
+        border: 1px solid #eaeaea;
+        border-radius: 5px;
+        background-color: #fafafa;
+        color: gray;
+        font-size: 12px;
+      }
+      .loginBtn {
+        width: 243px;
+        height: 38px;
+        margin-top: 8px;
+        margin-bottom: 10px;
+        border: 1px solid;
+        border-radius: 5px;
+        background-color: #0095f6;
+        color: white;
+      }
+      .loginBtnDisabled {
+        color: white;
+        width: 243px;
+        height: 38px;
+        margin-top: 8px;
+        margin-bottom: 10px;
+        border: 1px solid;
+        border-radius: 5px;
+        background-color: #b2dffc;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .forgotPw {
+    font-size: 13px;
+    text-align: center;
+    .pageMove {
+    }
+  }
+}
+
+/*.login_form {
+  display: flex;
+  flex-direction: column;
+  width: 537px;
+}*/

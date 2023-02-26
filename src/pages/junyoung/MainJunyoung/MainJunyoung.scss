@@ -1,0 +1,792 @@
+/* header*/
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+$primary-color: white;
+$border-color: rgb(235, 233, 233);
+
+@mixin followColor {
+  position: absolute;
+  right: 0;
+  padding: 1.5rem 0 1rem 1rem;
+  border: none;
+  background: none;
+  color: #0095f6;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+@mixin recomNameColor {
+  margin-top: 0;
+  margin-bottom: 0.1rem;
+  font-weight: bold;
+}
+@mixin recomInfoColor {
+  margin-top: 0;
+  color: #bababa;
+  font-size: 14px;
+}
+@mixin sideImgCss {
+  width: 50px;
+  height: 50px;
+  margin-top: 8px;
+  margin-right: 1rem;
+  border-radius: 100%;
+}
+
+.main {
+  .header {
+    position: fixed;
+    z-index: 20;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    border-bottom: 1px solid $border-color;
+    background-color: $primary-color;
+
+    .headerNav {
+      display: flex;
+      justify-content: space-between;
+      width: 1200px;
+      margin: 0 auto;
+      padding-top: 13px;
+      .logo {
+        display: flex;
+        width: 200px;
+        .logoClick {
+          .aboutLogo {
+            width: 23px;
+            padding-top: 10px;
+          }
+        }
+        .weFont {
+          padding-left: 10px;
+
+          .we {
+            padding-top: 3px;
+            color: black;
+            font-family: "Lobster", cursive;
+            font-size: 30px;
+
+            a:before {
+              content: "┃";
+              padding-right: 5px;
+            }
+          }
+        }
+      }
+      .searchBar {
+        position: relative;
+        width: 250px;
+
+        .searchText {
+          width: 100%;
+          margin-top: 6px;
+          padding: 6px 12px;
+          border: 1px solid rgba(218, 217, 217, 0.767);
+          background-color: rgba(238, 235, 235, 0.288);
+
+          &::placeholder {
+            background: url(https://cdn2.iconfinder.com/data/icons/ios-7-icons/50/search-512.png)
+              no-repeat 35% center/15px 15px;
+            text-align: center;
+            filter: invert(0.5);
+          }
+        }
+      }
+      .nav {
+        display: flex;
+        position: relative;
+        justify-content: space-between;
+        width: 120px;
+        height: 45px;
+
+        div {
+          display: block;
+          width: 25px;
+        }
+
+        .navCompass {
+          background: url(https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png)
+            no-repeat;
+          background-position: center;
+          background-size: 100%;
+        }
+
+        .navHeart {
+          background: url(https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png)
+            no-repeat;
+          background-position: center;
+          background-size: 100%;
+
+          &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            bottom: 0px;
+            left: 50%;
+            width: 4px;
+            height: 4px;
+            transform: translateX(-50%);
+            border-radius: 50%;
+            background-color: red;
+          }
+        }
+
+        .navProfile {
+          background: url(https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png)
+            no-repeat;
+          background-position: center;
+          background-size: 100%;
+        }
+      }
+    }
+  }
+  .articleWrap {
+    /* position: relative; */
+    right: 0px;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    border-radius: 3px;
+    background-color: #fafafa;
+
+    .feedBox {
+      height: 100px;
+    }
+
+    .feed {
+      width: 580px;
+      border: 1px solid #dbdbdb;
+      border-radius: 3px;
+
+      .feedId {
+        display: flex;
+        position: relative;
+        justify-content: center;
+        height: 60px;
+
+        .idRound {
+          display: flex;
+          position: absolute;
+          /* flex-direction: column; */
+          top: 15px;
+          left: 10px;
+          width: 32px;
+          height: 32px;
+          border-radius: 50%;
+
+          .idBox {
+            display: flex;
+            position: absolute;
+            top: -1px;
+            left: 0px;
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: flex-start;
+            width: 536px;
+            height: 41px;
+
+            .idBoxImg {
+              .idImg {
+                width: 35px;
+                height: 35px;
+                padding-left: 5px;
+                border-radius: 50%;
+              }
+            }
+            .idContainer {
+              display: flex;
+              position: relative;
+              left: 10px;
+              flex-direction: column;
+              align-items: flex-start;
+
+              .idName {
+                font-size: 16px;
+                font-weight: 600;
+              }
+              .place {
+                font-size: 13px;
+              }
+            }
+          }
+          .moreDetails {
+            position: relative;
+            right: -530px;
+
+            .moreImg {
+              display: flex;
+              justify-content: flex-end;
+              width: 30px;
+              height: 30px;
+            }
+          }
+        }
+      }
+      .imgArea {
+        display: block;
+        width: 100%;
+        height: auto;
+        .feedImg {
+          display: block;
+          width: 100%;
+          height: auto; //feed 클래스에 넓이주고 두개다 이렇게 설정하는게 맞는가
+        }
+      }
+      .feedBottom {
+        .emoticonBox {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          height: 40px;
+          margin: 0px;
+          padding: 3px 5px 0px 7px;
+
+          .emoticonBox2 {
+            display: flex;
+
+            .heartBox {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 40px;
+              margin: 0px;
+
+              .heart {
+                width: 24px;
+                height: 24px;
+              }
+            }
+            .commentBox {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 40px;
+              margin: 0px;
+
+              .comment {
+                width: 24px;
+                height: 24px;
+              }
+            }
+            .directBox {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 40px;
+              margin: 0px;
+
+              .direct {
+                width: 24px;
+                height: 24px;
+              }
+            }
+          }
+          .bookmarkBox {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+
+            .bookmark {
+              width: 24px;
+              height: 24px;
+            }
+          }
+        }
+      }
+      .feedLikeBox {
+        display: flex;
+        position: relative;
+        left: 8px;
+        flex-direction: row;
+        align-items: center;
+        height: 30px;
+        padding: 0 16px 0 8px;
+
+        .feedLikePicture {
+          display: flex;
+          top: 15px;
+          left: 10px;
+          align-items: center;
+          justify-content: center;
+          border: 1px solid #dbdbdb;
+          border-radius: 50%;
+
+          .feedLikePeople {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+          }
+        }
+        .whoLike {
+          margin-left: 5px;
+          font-weight: bold;
+
+          .feedLike {
+            /* display: flex; */
+            position: relative;
+            left: 5px;
+            font-weight: normal;
+          }
+        }
+      }
+      .feedArticle {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+
+        .feedArticleBox {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: flex-start;
+          padding: 0 50px 10px 16px;
+
+          .commentsContainer {
+            display: flex;
+            margin-bottom: 5px;
+            padding-top: 5px;
+
+            .whoFeed {
+              font-weight: bold;
+            }
+            .feedMsg {
+              padding-left: 5px;
+            }
+            .moreMsg {
+              padding: 2px;
+              color: #8e8e8e;
+              font-size: 16px;
+              line-height: 18px;
+            }
+          }
+          .comments1Box {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+
+            .whoComment {
+              display: inline-block;
+              margin: 0px 0px 5px 0px;
+              font-weight: bold;
+              .commentMsg {
+                padding-left: 5px;
+                font-weight: normal;
+              }
+            }
+          }
+          .newComments {
+            .commentsList {
+              list-style: none;
+              .commentsArea {
+                margin-bottom: 5px;
+                .userId {
+                  font-weight: bold;
+                }
+                .commentContents {
+                  margin-left: 5px;
+                }
+              }
+            }
+          }
+          .comments2 {
+            color: #8e8e8e;
+            font-size: 15px;
+            letter-spacing: 0.3px;
+            line-height: 30px;
+          }
+        }
+      }
+      .inputContainer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 50px;
+        padding: 0 12px 0 12px;
+        border-top: 1px solid #efefef;
+
+        .typeComment {
+          display: flex;
+          justify-content: flex-start;
+          width: 530px;
+          color: #8e8e8e;
+
+          .inputBox {
+            width: 550px;
+            height: 47px; /*50이면 선이 짤림*/
+            border: solid 0px;
+            outline: none;
+            background-color: #fafafa;
+            color: black;
+            font: 14px;
+          }
+        }
+        .buttonWrap {
+          .buttonBox {
+            border: solid 0px;
+            outline: none;
+            background-color: #fafafa;
+            color: #c0e0fd;
+          }
+          .submit {
+            color: #bee1fd;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* 피드 오른쪽 스토리 */
+.sideRight {
+  width: 300px;
+  margin-left: 2rem;
+  .sideContainer {
+    display: flex;
+    margin-top: -2rem;
+    margin-bottom: 2rem;
+    cursor: pointer;
+    .wecodeLogo {
+      &:first-child {
+        width: 60px;
+        height: 60px;
+        margin-right: 1rem;
+        border-radius: 100%;
+        background: url(https://pbs.twimg.com/profile_images/1109389733912666112/XX55fTPf.jpg)
+          no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+    }
+    .wecodeInfo {
+      &:last-child {
+        position: relative;
+      }
+      .realWecode {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        & > :first-child {
+          font-weight: bold;
+        }
+        & > :last-child {
+          margin-top: 0;
+          margin-bottom: 0;
+          color: #bababa;
+          span {
+            &:before {
+              content: "┃";
+            }
+          }
+        }
+      }
+    }
+  }
+  .sideStory {
+    height: 258px;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    overflow-y: hidden;
+    border: 1px solid #e6e6e6;
+    border-radius: 5px;
+    background: #fff;
+
+    .sideNavigation {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+
+      .storyTitle {
+        color: #bababa;
+        font-size: 14px;
+      }
+      .seeAll {
+        color: rgb(73, 73, 73);
+        font-size: 14px;
+        font-weight: 760;
+      }
+    }
+    .story {
+      display: flex;
+
+      .storyImg1 {
+        width: 50px;
+        height: 50px;
+        margin-right: 1rem;
+        border: 2px solid #ed0086;
+        border-radius: 100%;
+        background: url(https://i.pinimg.com/564x/20/a1/58/20a158ec5418aa82ec1e167705351087.jpg)
+          no-repeat;
+        background-position: top;
+        background-size: cover;
+      }
+      .storyText {
+        margin-top: 5px;
+        margin-bottom: 0.3rem;
+
+        .storyTextBold {
+          margin-top: 0.1rem;
+          font-weight: bold;
+        }
+        .storyTextColor {
+          color: #bababa;
+        }
+      }
+    }
+    .story {
+      display: flex;
+      margin-bottom: 0.8rem;
+
+      .storyImg2 {
+        width: 50px;
+        height: 50px;
+        margin-right: 1rem;
+        border: 2px solid #ed0086;
+        border-radius: 100%;
+        background: url(https://i.pinimg.com/564x/59/e2/09/59e20910e1a70ba37e4571fd15971b55.jpg)
+          no-repeat;
+        background-position: top;
+        background-size: cover;
+      }
+      .storyText {
+        margin-top: 5px;
+        margin-bottom: 0.3rem;
+
+        .storyTextBold {
+          margin-top: 0.1rem;
+          font-weight: bold;
+        }
+        .storyTextColor {
+          margin-top: 0;
+          color: #bababa;
+        }
+      }
+    }
+    .story {
+      display: flex;
+      margin-bottom: 0.8rem;
+
+      .storyImg3 {
+        width: 50px;
+        height: 50px;
+        margin-right: 1rem;
+        border: 2px solid #ed0086;
+        border-radius: 100%;
+        background: url(https://i.pinimg.com/474x/ff/be/44/ffbe440cbebd92f0761aa4e12bbc0333.jpg)
+          no-repeat;
+        background-position: top;
+        background-size: cover;
+      }
+      .storyText {
+        margin-top: 5px;
+        margin-bottom: 0.3rem;
+
+        .storyTextBold {
+          margin-top: 0.1rem;
+          font-weight: bold;
+        }
+        .storyTextColor {
+          margin-top: 0;
+          color: #bababa;
+        }
+      }
+    }
+    .story {
+      display: flex;
+      margin-bottom: 0.8rem;
+
+      .storyImg4 {
+        width: 50px;
+        height: 50px;
+        margin-right: 1rem;
+        border: 2px solid #ed0086;
+        border-radius: 100%;
+        background: url(https://i.pinimg.com/564x/33/19/38/3319388f960765cacbc8c82658276531.jpg)
+          no-repeat;
+        background-position: top;
+        background-size: cover;
+      }
+      .storyText {
+        margin-top: 5px;
+        margin-bottom: 0.3rem;
+
+        .storyTextBold {
+          margin-top: 0.1rem;
+          margin-bottom: 0; //삭제하면 위에 3개는 변화없눈데 왜 얘만 그러지 ?
+          font-weight: bold;
+        }
+        .storyTextColor {
+          margin-top: 0;
+          color: #bababa;
+        }
+      }
+    }
+  }
+  .sideRecom {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border: 1px solid #e6e6e6;
+    border-radius: 5px;
+    background: #fff;
+
+    .sideNavigation {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+
+      .recomTitle {
+        color: #bababa;
+        font-size: 14px;
+      }
+      .seeAll {
+        color: rgb(73, 73, 73);
+        font-size: 14px;
+        font-weight: 760;
+      }
+    }
+    .sideWrap {
+      display: flex;
+      position: relative;
+
+      .sideWraps {
+        display: flex;
+
+        .sideImg1 {
+          @include sideImgCss;
+          background: url(https://i.pinimg.com/564x/59/f7/c0/59f7c0ddcb9eaf44e40fbf1d9fdb15e0.jpg)
+            no-repeat;
+          background-position: center;
+          background-size: cover;
+        }
+        .sideChilds {
+          margin-top: 1rem;
+          .recomName {
+            @include recomNameColor();
+          }
+          .recomInfo {
+            @include recomInfoColor();
+          }
+        }
+      }
+      .follow {
+        @include followColor;
+      }
+    }
+    .sideWrap {
+      display: flex;
+      position: relative;
+
+      .sideWraps {
+        display: flex;
+
+        .sideImg2 {
+          @include sideImgCss;
+          background: url(https://i.pinimg.com/564x/0d/4d/f5/0d4df5c7da2d7d8c064cbb904bf27c47.jpg)
+            no-repeat;
+          background-position: center;
+          background-size: cover;
+        }
+        .sideChilds {
+          margin-top: 1rem;
+          .recomName {
+            @include recomNameColor();
+          }
+          .recomInfo {
+            @include recomInfoColor();
+          }
+        }
+      }
+      .follow {
+        @include followColor;
+      }
+    }
+    .sideWrap {
+      display: flex;
+      position: relative;
+
+      .sideWraps {
+        display: flex;
+
+        .sideImg3 {
+          @include sideImgCss;
+          background: url(https://i.pinimg.com/564x/85/79/4f/85794f97c38e5369f3f747fb84e57980.jpg)
+            no-repeat;
+          background-position: center;
+          background-size: cover;
+        }
+        .sideChilds {
+          margin-top: 1rem;
+          .recomName {
+            @include recomNameColor();
+          }
+          .recomInfo {
+            @include recomInfoColor();
+          }
+        }
+      }
+      .follow {
+        @include followColor;
+      }
+    }
+  }
+  .footerWrapper {
+    .footerContent {
+      color: #acacac;
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 1.2rem;
+    }
+    .version {
+      color: #acacac;
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 1.2rem;
+    }
+  }
+}
+
+// .side-recom > :nth-child(2),
+// .side-recom > :nth-child(3) {
+//   margin-bottom: 0.3rem;
+// }
+
+// #sideWrapImg2 {
+//   background: url(https://i.pinimg.com/564x/0d/4d/f5/0d4df5c7da2d7d8c064cbb904bf27c47.jpg)
+//     no-repeat;
+//   background-position: center;
+//   background-size: cover;
+// }
+
+// #side-wrap-img3 {
+//   background: url(https://i.pinimg.com/564x/85/79/4f/85794f97c38e5369f3f747fb84e57980.jpg)
+//     no-repeat;
+//   background-position: center;
+//   background-size: cover;
+// }
+// ///////////
+// .side-wrap > :first-child > :last-child > :first-child {
+//   margin-top: 0;
+//   margin-bottom: 0.1rem;
+//   font-weight: bold;
+// }
+
+// .side-wrap > :first-child > :last-child > :last-child {
+//   margin-top: 0;
+//   color: #bababa;
+//   font-size: 14px;
+// }
+
+// .side-wrap > :last-child {
+//   position: absolute;
+//   right: 0;
+//   padding: 1.5rem 0 1rem 1rem;
+//   border: none;
+//   background: none;
+//   color: #0095f6;
+//   font-size: 0.9rem;
+//   font-weight: 700;
+// }
+//////////
