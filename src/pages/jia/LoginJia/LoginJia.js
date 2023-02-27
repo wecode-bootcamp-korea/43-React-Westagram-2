@@ -27,7 +27,7 @@ const LoginJia = e => {
       : handleDisabled();
   };
   return (
-    <div className="LoginJia">
+    <div className="loginJia">
       <div className="body">
         <div className="layout">
           <h1 className="loginLogo">westagram</h1>
