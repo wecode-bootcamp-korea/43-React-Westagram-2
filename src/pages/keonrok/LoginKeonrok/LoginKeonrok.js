@@ -4,7 +4,7 @@ import "./LoginKeonrok.scss";
 const LoginKeonrok = () => {
   return (
     <article>
-      <div className="loginWrapper">
+      <div className="loginKeonrok">
         <div className="loginLogo">westagram</div>
         <form className="loginForm">
           <input
@@ -22,16 +22,11 @@ const LoginKeonrok = () => {
             name="id"
             placeholder="비밀번호"
           />
-          <Link to="/main-keonrok">
-            <button
-              id="login_btn"
-              className="loginButton"
-              type="button"
-              disabled
-            >
-              로그인
-            </button>
-          </Link>
+          {/* <Link to="/main-keonrok"> */}
+          <button id="login_btn" className="loginButton" type="button" disabled>
+            로그인
+          </button>
+          {/* </Link> */}
         </form>
         <a className="loginBottom" href="./lostPassword">
           비밀번호를 잊으셨나요?

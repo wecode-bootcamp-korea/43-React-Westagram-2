@@ -3,3 +3,9 @@ $white: #fff;
 $black: rgb(0,0,0)
 $blue: blue;
 $yellow: #FFFF00;
+
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

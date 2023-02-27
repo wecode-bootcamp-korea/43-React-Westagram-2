@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Lobster&amp;display=swap");
 
-.loginWrapper {
+.loginKeonrok {
   display: flex;
   position: absolute;
   top: 50%;
@@ -37,18 +37,15 @@
   border: 1px solid #dbdbdb;
   border-radius: 3px;
   background-color: #fafafa;
-}
-
-.loginText:focus {
-  outline: 1px solid #a8a8a8;
-}
-
-.loginText::placeholder {
-  color: #8e8e8e;
-}
-
-.loginText::value {
-  color: #262626;
+  &:focus {
+    outline: 1px solid #a8a8a8;
+  }
+  &:placeholder {
+    color: #8e8e8e;
+    &:value {
+      color: #262626;
+    }
+  }
 }
 
 .loginButton {
@@ -70,81 +67,8 @@
   font-size: 13px;
 }
 
-.about-logo {
-  width: 23px;
-  padding-top: 10px;
-}
-
-.logo {
-  display: flex;
-  width: 200px;
-}
-
-.logo .wefont {
-  padding-left: 10px;
-}
-
-.headerContainer {
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  height: 54px;
-  padding: 30px;
-  border-bottom: 1px solid rgba(var(--b6a, 219, 219, 219), 1);
-}
-
-.headerContents {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  width: 100%;
-  padding: 0 90px;
-}
-
-.WestagramTag {
-  display: flex;
-}
-
-.WestagramTag a {
-  color: black;
-  font-family: "Lobster", cursive;
-  font-size: 30px;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.headerSearchBar {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 5px 5px 5px 5px;
-  border: 1px solid rgba(var(--b6a, 219, 219, 219), 1);
-}
-
 input {
   width: 230px;
   padding: 5px;
   border: none;
-}
-
-.headerRightImage {
-  font-size: 30px;
-}
-
-.headerRightImage a {
-  color: black;
-}
-
-article {
-  display: flex;
-  flex-direction: column;
-  width: 614px;
-  height: 100%;
-  border: 1px solid rgba(var(--b6a, 219, 219, 219), 1);
-}
-
-aside {
-  display: flex;
-  flex-direction: column;
-  width: 400px;
 }

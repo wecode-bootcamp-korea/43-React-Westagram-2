@@ -3,11 +3,11 @@ import "./MainKeonrok.scss";
 
 const MainKeonrok = () => {
   return (
-    <div className="div_feeds">
+    <div className="mainKeonrok">
       <article>
         <div className="writer">
           <img
-            src="../../../public/images/img_kr.jpg"
+            src="./../public/images/img_kr.jpg"
             width="32.3px"
             height="32.3px"
             alt="writer_img"
@@ -46,7 +46,7 @@ const MainKeonrok = () => {
         <div className="writeReaction">
           <div className="writeReactionImg">
             <img
-              src="../../../public/images/img_kr.jpg"
+              src="./../public/images/img_kr.jpg"
               width="32.3px"
               height="32.3px"
             />
@@ -81,9 +81,10 @@ const MainKeonrok = () => {
       <aside />
       <div className="asideHead">
         <img
-          src="../../../public/images/img_kr.jpg"
+          src="./../../public/images/keonrok/img_kr.jpg"
           width="56px"
           height="56px"
+          alt="img_kr 이미지"
         />
         <div className="asideHeadText">
           <p>kr_shin</p>
