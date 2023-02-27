@@ -13,7 +13,6 @@ const ArticleJia = () => {
   const [comments, setComments] = useState([]);
   const [nextId, setNextId] = useState(0);
   const commentInput = useRef("");
-
   // events
 
   // input값 입력 이벤트
