@@ -11,19 +11,9 @@ main {
   align-items: center;
   justify-content: center;
   background-color: rgba(250, 250, 250, 255);
-  /* font-family: "돋움", dotum, sans-serif; */
-
-  /* 2번
-display: grid;
-place-items: center; */
-
-  /*3번
-position: relative 
-부모인 body 에 position을 주고
-wrap_box에 position: absolute를 주는 것*/
 }
 
-.wrapBox {
+.loginJunyoung {
   @include center;
   flex-direction: column;
   width: 250px;

@@ -1,14 +1,13 @@
 import React, { useState } from "react";
+import CommentJunyoung from "../CommentJunyoung/CommentJunyoung";
 import "./MainJunyoung.scss";
 
 const MainJunyoung = () => {
-  // const EnterInput = e => {
-  //   if (e.key === "Enter") {
-  //     handleOnClick();
-  //   }
-  // };
-
-  // const handleOnClick = () => {};
+  const [comment, setComment] = useState("");
+  const [commentArray, setCommentArray] = useState([]);
+  const addComment = commentArray.map(commentArray => (
+    <div key={commentArray.toString()}>{commentArray}</div>
+  ));
 
   return (
     <main className="main">
@@ -16,7 +15,7 @@ const MainJunyoung = () => {
         <nav className="headerNav">
           {/* 로고 */}
           <div className="logo">
-            <div onClick="location.href='#'" className="logoClick">
+            <div className="logoClick">
               <img
                 src="/images/junyoung/instagram.png"
                 className="aboutLogo"
@@ -26,7 +25,9 @@ const MainJunyoung = () => {
             </div>
             <div className="weFont">
               <div className="we">
-                <a href="#!">Westagram</a>
+                <a href="#" className="navLogo">
+                  Westagram
+                </a>
               </div>
             </div>
           </div>
@@ -36,9 +37,9 @@ const MainJunyoung = () => {
           </div>
           {/* 상단바 아이콘들 */}
           <div className="nav">
-            <div className="navCompass" onClick="location.href='#'" />
-            <div className="navHeart" onClick="location.href='#!'" />
-            <div className="navProfile" onClick="location.href='#!'" />
+            <div className="navCompass" />
+            <div className="navHeart" />
+            <div className="navProfile" />
           </div>
         </nav>
       </header>
@@ -163,28 +164,38 @@ const MainJunyoung = () => {
               <div className="comments2">3시간 전</div>
             </div>
           </div>
-          <div className="inputContainer">
-            <div className="typeComment">
-              <input
-                className="inputBox"
-                type="text"
-                placeholder="댓글 달기..."
-                value={comment}
-                onChange={commentInput}
-              />
-            </div>
-            <span className="buttonWrap">
-              <button className="buttonBox" type="submit">
-                게시
-              </button>
-            </span>
+          <div className="commentList" value={comment}>
+            {addComment}
           </div>
+          {/* <div className="inputContainer">
+            <div className="typeComment" onSubmit={onSubmit}>
+              <form className="commentWrap">
+                <input
+                  className="inputComment"
+                  type="text"
+                  placeholder="댓글 달기..."
+                  onChange={onChange}
+                  value={comment}
+                />
+              </form>
+              <button type="submit" className="submitCommentInactive">
+                게시
+              </button> */}
+          <CommentJunyoung
+            key={commentArray.toString()}
+            comment={comment}
+            setComment={setComment}
+            commentArray={commentArray}
+            setCommentArray={setCommentArray}
+          />
         </div>
+        {/* </div>
+        </div> */}
       </article>
       {/* 오른쪽 스토리부분 */}
       {/*사이드 오른쪽 부분  */}
       <section className="sideRight">
-        <div className="sideContainer" onclick="location.href='#'">
+        <div className="sideContainer">
           <div className="wecodeLogo" />
           <div className="wecodeInfo">
             <div className="realWecode">
@@ -199,12 +210,10 @@ const MainJunyoung = () => {
         <div className="sideStory">
           <div className="sideNavigation">
             <span className="storyTitle">스토리</span>
-            <div onclick="location.href='#'" className="seeAll">
-              모두 보기
-            </div>
+            <div className="seeAll">모두 보기</div>
           </div>
 
-          <div className="story" onclick="location.href='#'">
+          <div className="story">
             <div className="storyImg1" />
             <div className="storyText">
               <p className="storyTextBold">s.__.zy</p>
@@ -212,7 +221,7 @@ const MainJunyoung = () => {
             </div>
           </div>
 
-          <div className="story" onclick="location.href='#'">
+          <div className="story">
             <div className="storyImg2" />
             <div className="storyText">
               <p className="storyTextBold">s__k9211</p>
@@ -220,7 +229,7 @@ const MainJunyoung = () => {
             </div>
           </div>
 
-          <div className="story" onclick="location.href='#'">
+          <div className="story">
             <div className="storyImg3" />
             <div className="storyText">
               <p className="storyTextBold">Ssoyoon</p>
@@ -228,7 +237,7 @@ const MainJunyoung = () => {
             </div>
           </div>
 
-          <div className="story" onclick="location.href='#'">
+          <div className="story">
             <div className="storyImg4" />
             <div className="storyText">
               <p className="storyTextBold">h.dina</p>
@@ -241,9 +250,7 @@ const MainJunyoung = () => {
         <div className="sideRecom">
           <div className="sideNavigation">
             <span className="recomTitle">회원님을 위한 추천</span>
-            <div onclick="location.href='#'" className="seeAll">
-              모두 보기
-            </div>
+            <div className="seeAll">모두 보기</div>
           </div>
 
           <div className="sideWrap">
@@ -255,7 +262,7 @@ const MainJunyoung = () => {
               </div>
             </div>
 
-            <button class="follow">팔로우</button>
+            <button className="follow">팔로우</button>
           </div>
 
           <div className="sideWrap">
@@ -267,7 +274,7 @@ const MainJunyoung = () => {
               </div>
             </div>
 
-            <button class="follow">팔로우</button>
+            <button className="follow">팔로우</button>
           </div>
 
           <div className="sideWrap">
@@ -279,7 +286,7 @@ const MainJunyoung = () => {
               </div>
             </div>
 
-            <button class="follow">팔로우</button>
+            <button className="follow">팔로우</button>
           </div>
         </div>
 

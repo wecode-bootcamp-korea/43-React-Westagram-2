@@ -33,7 +33,7 @@ const LoginJunyoung = () => {
   };
 
   return (
-    <div className="wrapBox">
+    <div className="loginJunyoung">
       <div className="westagram">Westagram</div>
       <form className="loginForm">
         <form action="#none" className="loginWrap">
@@ -54,7 +54,7 @@ const LoginJunyoung = () => {
           <div>
             <button
               className={active ? "loginBtn" : "loginBtnDisabled"}
-              disabled={active ? false : true} //이것도 다르게 할수있을거같은데
+              disabled={!active}
               type="submit"
               id="login_login"
               onClick={goToMain}

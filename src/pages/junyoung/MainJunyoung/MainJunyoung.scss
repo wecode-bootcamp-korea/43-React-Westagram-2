@@ -65,6 +65,9 @@ $border-color: rgb(235, 233, 233);
             color: black;
             font-family: "Lobster", cursive;
             font-size: 30px;
+            .navLogo {
+              color: black;
+            }
 
             a:before {
               content: "┃";
@@ -399,6 +402,12 @@ $border-color: rgb(235, 233, 233);
           }
         }
       }
+      .commentList {
+        // display: flex;
+        justify-content: flex-start;
+        width: 100%;
+        margin-left: 15px;
+      }
       .inputContainer {
         display: flex;
         align-items: center;
@@ -412,28 +421,36 @@ $border-color: rgb(235, 233, 233);
           justify-content: flex-start;
           width: 530px;
           color: #8e8e8e;
-
-          .inputBox {
-            width: 550px;
-            height: 47px; /*50이면 선이 짤림*/
-            border: solid 0px;
-            outline: none;
-            background-color: #fafafa;
-            color: black;
-            font: 14px;
+          .commentWrap {
+            .inputComment {
+              width: 510px;
+              height: 47px; /*50이면 선이 짤림*/
+              border: solid 0px;
+              outline: none;
+              background-color: #fafafa;
+              color: black;
+              font: 14px;
+            }
           }
         }
-        .buttonWrap {
-          .buttonBox {
-            border: solid 0px;
-            outline: none;
-            background-color: #fafafa;
-            color: #c0e0fd;
-          }
-          .submit {
-            color: #bee1fd;
-            font-size: 14px;
-          }
+
+        .submitCommentInactive {
+          border: solid 0px;
+          outline: none;
+          background-color: #fafafa;
+          color: #c0e0fd;
+          width: 50px;
+        }
+        .submitCommentActive {
+          border: solid 0px;
+          outline: none;
+          background-color: #fafafa;
+          color: #0095f6;
+          width: 50px;
+        }
+        .submit {
+          color: #bee1fd;
+          font-size: 14px;
         }
       }
     }
