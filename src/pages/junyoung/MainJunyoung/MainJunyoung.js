@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import CommentJunyoung from "../CommentJunyoung/CommentJunyoung";
+import FOOTER_LIST from "../AsideJunyoung/AsideJunyoung";
 import "./MainJunyoung.scss";
 
 const MainJunyoung = () => {
@@ -25,7 +26,7 @@ const MainJunyoung = () => {
             </div>
             <div className="weFont">
               <div className="we">
-                <a href="#" className="navLogo">
+                <a href="#!" className="navLogo">
                   Westagram
                 </a>
               </div>
@@ -291,11 +292,16 @@ const MainJunyoung = () => {
         </div>
 
         <div className="footerWrapper">
-          <p className="footerContent">
+          {FOOTER_LIST.map(info => (
+            <span key={info.id} className="footerContent">
+              {info.title} ·{" "}
+            </span>
+          ))}
+          {/* <p className="footerContent">
             Instagram 정보 · 지원 · 홍보센터 · API · <br />
             채용정보 개인정보처리방침 · 약관 ·<br /> 디렉터리 · 프로필 ·
             해시태그 · 언어
-          </p>
+          </p> */}
           <p className="version">ⓒ 2023 INSTAGRAM</p>
         </div>
       </section>

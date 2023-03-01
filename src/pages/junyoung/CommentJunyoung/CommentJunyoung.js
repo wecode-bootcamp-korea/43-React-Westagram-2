@@ -20,6 +20,7 @@ const CommentJunyoung = props => {
     setCommentArray([...commentArray, comment]);
     setComment("");
   };
+
   return (
     <div className="inputContainer">
       <div className="addComment">

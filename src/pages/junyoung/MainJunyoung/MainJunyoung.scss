@@ -129,7 +129,7 @@ $border-color: rgb(235, 233, 233);
             width: 4px;
             height: 4px;
             transform: translateX(-50%);
-            border-radius: 50%;
+            border-radius: 100%;
             background-color: red;
           }
         }
@@ -752,15 +752,16 @@ $border-color: rgb(235, 233, 233);
   .footerWrapper {
     .footerContent {
       color: #acacac;
-      font-size: 14px;
+      font-size: 15px;
       font-weight: 300;
       line-height: 1.2rem;
     }
     .version {
       color: #acacac;
-      font-size: 14px;
+      font-size: 15px;
       font-weight: 300;
       line-height: 1.2rem;
+      margin-top: 5px;
     }
   }
 }
