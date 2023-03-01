@@ -1,15 +1,29 @@
+.mainHeader {
+  position: fixed;
+  width: 100%;
+  margin-bottom: 100px;
+  // padding-bottom: 50px;
+  background-color: aqua;
+}
+
+.mainNav {
+  position: fixed;
+  width: 100%;
+  height: 50px;
+  background-color: yellow;
+}
+
+.westagramLogo {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  width: 10px;
+  height: 10px;
+}
+
 .about-logo {
   width: 23px;
   padding-top: 10px;
-}
-
-.logo {
-  display: flex;
-  width: 200px;
-}
-
-.logo .wefont {
-  padding-left: 10px;
 }
 
 .headerContainer {
@@ -63,11 +77,10 @@ input {
   color: black;
 }
 
-.mainKeonrok {
+.mainSection {
   display: flex;
   align-content: center;
   justify-content: center;
-  margin: 30px;
   padding-top: 15px;
   gap: 50px;
 }
@@ -221,8 +234,8 @@ aside {
 }
 
 .asideHead {
-  display: flex;
-  align-items: center;
+  // display: flex;
+  // align-items: center;
   margin: 10px 0 10px 10px;
 }
 
@@ -235,12 +248,13 @@ aside {
   padding-left: 10px;
   font-size: 13.3px;
   font-weight: bold;
-  /* display: flex; */
   text-align: left;
 }
 
 .asideBody {
   display: flex;
+  width: 100%;
+  height: 50%;
   flex-direction: column;
   border: 1px solid rgba(var(--b6a, 219, 219, 219), 1);
 }
@@ -303,6 +317,8 @@ aside {
 .asideTails {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  height: 50%;
   margin-top: 20px;
   border: 1px solid rgba(var(--b6a, 219, 219, 219), 1);
 }

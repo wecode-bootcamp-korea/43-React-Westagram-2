@@ -1,10 +1,30 @@
-import React, { Link } from "react";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./LoginKeonrok.scss";
 
 const LoginKeonrok = () => {
+  const [id, setId] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleIdInput = event => {
+    setId(event.target.value);
+  };
+
+  const handlePasswordInput = event => {
+    setPassword(event.target.value);
+  };
+
+  const [isActive, setIsActive] = useState(false);
+
+  const isInputLogin = () => {
+    return id.includes("@") && password.length >= 5
+      ? setIsActive(true)
+      : setIsActive(false);
+  };
+
   return (
-    <article>
-      <div className="loginKeonrok">
+    <article className="loginKeonrok">
+      <div className="loginWrap">
         <div className="loginLogo">westagram</div>
         <form className="loginForm">
           <input
@@ -13,7 +33,8 @@ const LoginKeonrok = () => {
             type="text"
             name="id"
             placeholder="전화번호, 사용자 이름 또는 이메일"
-            onChange="ID 입력 확인"
+            onChange={handleIdInput}
+            onKeyUp={isInputLogin}
           />
           <input
             id="login_pw"
@@ -21,12 +42,17 @@ const LoginKeonrok = () => {
             type="password"
             name="id"
             placeholder="비밀번호"
+            onChange={handlePasswordInput}
+            onKeyUp={isInputLogin}
           />
-          {/* <Link to="/main-keonrok"> */}
-          <button id="login_btn" className="loginButton" type="button" disabled>
+          <button
+            id="login_btn"
+            className={isActive ? "activeButton" : "unActiveButton"}
+            type="button"
+            disabled={id === "" || password === "" ? true : false}
+          >
             로그인
           </button>
-          {/* </Link> */}
         </form>
         <a className="loginBottom" href="./lostPassword">
           비밀번호를 잊으셨나요?
