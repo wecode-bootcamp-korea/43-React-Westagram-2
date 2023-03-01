@@ -60,8 +60,8 @@ const ArticleJia = () => {
       {articleData.map(info => {
         return (
           <article key={info.id}>
-            <div className="feedsUpside">
-              <div className="feedsUpsideLeft">
+            <div className="feedsInfo">
+              <div className="feedsInfoDetail">
                 <img alt="profile" src={FeedProfileImg} />
                 <Link className="feedsNickname" to="">
                   {info.nickname}
@@ -75,9 +75,9 @@ const ArticleJia = () => {
               alt="feeds"
               src={`${info.image_url}`}
             />
-            <div className="feedsBottom">
+            <div className="feedsMain">
               <div className="feedsIcon">
-                <div className="feedsIconLeft">
+                <div className="feedsIconList">
                   <i className="fa-regular fa-heart" />
                   <i className="fa-regular fa-comment icon-chat" />
                   <i className="fa-regular fa-paper-plane" />

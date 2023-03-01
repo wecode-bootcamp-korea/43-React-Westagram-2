@@ -19,36 +19,36 @@ const NavJia = () => {
             <div className="navWrap">
               <div className="navWrapToggle">
                 <Link className="logoWestagram">Westagram</Link>
-                <div className="navMiddle">
-                  <Link className="navMiddleMenu home">
+                <div className="navList">
+                  <Link className="navListMenu home">
                     <i className="fa-solid fa-house" />
                     <span>홈</span>
                   </Link>
-                  <Link className="navMiddleMenu search">
+                  <Link className="navListMenu search">
                     <i className="fa-solid fa-magnifying-glass" />
                     <span>검색</span>
                   </Link>
-                  <Link className="navMiddleMenu explore">
+                  <Link className="navListMenu explore">
                     <i className="fa-regular fa-compass" />
                     <span>탐색 탭</span>
                   </Link>
-                  <Link className="navMiddleMenu reels">
+                  <Link className="navListMenu reels">
                     <i className="fa-solid fa-video" />
                     <span>릴스</span>
                   </Link>
-                  <Link className="navMiddleMenu message">
+                  <Link className="navListMenu message">
                     <i className="fa-regular fa-paper-plane" />
                     <span>메세지</span>
                   </Link>
-                  <Link className="navMiddleMenu update">
+                  <Link className="navListMenu update">
                     <i className="fa-regular fa-heart" />
                     <span>알림</span>
                   </Link>
-                  <Link className="navMiddleMenu update">
+                  <Link className="navListMenu update">
                     <i className="fa-regular fa-square-plus" />
                     <span>만들기</span>
                   </Link>
-                  <Link className="navMiddleMenu profile">
+                  <Link className="navListMenu profile">
                     <img
                       className="navProfile"
                       src={ProfileImg}
@@ -56,7 +56,7 @@ const NavJia = () => {
                     />
                     <span>프로필</span>
                   </Link>
-                  <Link className="navMiddleMenu logout" to="/">
+                  <Link className="navListMenu logout" to="/">
                     <i className="fa-solid fa-arrow-right-from-bracket" />
                     <span>로그아웃</span>
                   </Link>
@@ -64,7 +64,7 @@ const NavJia = () => {
               </div>
             </div>
           </div>
-          <div className="navBottom">
+          <div className="navFold">
             <i className="fa-solid fa-bars" onClick={() => toggleMenu()} />
             <span>접기</span>
           </div>

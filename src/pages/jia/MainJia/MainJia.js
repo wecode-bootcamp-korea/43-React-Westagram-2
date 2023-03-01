@@ -12,7 +12,7 @@ const MainJia = () => {
     <div className="MainJia">
       <NavJia />
       <div className="mainBox">
-        <div className="mainLeft">
+        <div className="feed">
           <StoryJia />
           <ArticleJia />
         </div>

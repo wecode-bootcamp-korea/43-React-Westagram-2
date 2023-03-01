@@ -56,13 +56,13 @@ article {
   }
 }
 
-.feedsUpside {
+.feedsInfo {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 12px 0;
 
-  .feedsUpsideLeft {
+  .feedsInfoDetail {
     display: flex;
     align-items: center;
 
@@ -87,14 +87,14 @@ article {
   }
 }
 
-.feedsBottom {
+.feedsMain {
   padding: 10px 10px 0 10px;
 
   .feedsIcon {
     display: flex;
     justify-content: space-between;
 
-    .feedsIconLeft {
+    .feedsIconList {
       font-size: 22px;
 
       .icon-chat {

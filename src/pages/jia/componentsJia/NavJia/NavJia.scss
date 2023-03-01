@@ -60,14 +60,14 @@ button {
     font-family: "Lobster", cursive;
   }
 
-  .navMiddle {
+  .navList {
     margin-top: 80px;
 
     i {
       font-size: 25px;
     }
 
-    .navMiddleMenu {
+    .navListMenu {
       display: flex;
       align-items: center;
       margin: 30px 0;
@@ -79,7 +79,7 @@ button {
     }
   }
 
-  .navBottom {
+  .navFold {
     position: fixed;
     bottom: 40px;
     display: flex;
