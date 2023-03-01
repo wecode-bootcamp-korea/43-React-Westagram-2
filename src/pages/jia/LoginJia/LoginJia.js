@@ -21,6 +21,7 @@ const LoginJia = e => {
     alert("아이디 혹은 패스워드를 확인해주세요.");
     setIsDisabled(true);
   };
+
   const checkAccount = e => {
     id.includes("@") && pw.length >= 5
       ? navigate("/main-jia")

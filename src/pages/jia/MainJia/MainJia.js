@@ -15,8 +15,6 @@ const MainJia = () => {
         <div className="mainLeft">
           <StoryJia />
           <ArticleJia />
-          <ArticleJia />
-          <ArticleJia />
         </div>
         <AsideJia />
       </div>
