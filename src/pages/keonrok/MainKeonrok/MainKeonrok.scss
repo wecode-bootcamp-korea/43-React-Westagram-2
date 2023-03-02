@@ -2,23 +2,25 @@
   position: fixed;
   width: 100%;
   margin-bottom: 100px;
-  // padding-bottom: 50px;
-  background-color: aqua;
+  padding-bottom: 50px;
+  //background-color: aqua;
 }
 
 .mainNav {
   position: fixed;
   width: 100%;
-  height: 50px;
-  background-color: yellow;
+  height: 5px;
+  //background-color: yellow;
 }
 
 .westagramLogo {
   display: flex;
   align-content: center;
   justify-content: center;
-  width: 10px;
-  height: 10px;
+  padding-left: 20px;
+  padding-top: 20px;
+  width: 50px;
+  height: 50px;
 }
 
 .about-logo {
@@ -234,8 +236,8 @@ aside {
 }
 
 .asideHead {
-  // display: flex;
-  // align-items: center;
+  display: flex;
+  align-items: center;
   margin: 10px 0 10px 10px;
 }
 
@@ -287,7 +289,7 @@ aside {
 }
 
 .asidehi {
-  display: flex;
+  //display: flex;
   margin: 10px 0 5px 0;
   margin-left: 10px;
 }
@@ -345,7 +347,7 @@ aside {
 }
 
 .asideTailsRecommend1 {
-  display: flex;
+  //display: flex;
   align-content: center;
   align-items: flex-start;
   justify-content: row;
@@ -357,7 +359,7 @@ aside {
   display: flex;
   flex-direction: column;
   padding-left: 10px;
-  font-size: 9.3px;
+  font-size: 13.3px;
   font-weight: bold;
   text-align: left;
 }
@@ -371,4 +373,6 @@ aside {
   display: flex;
   align-content: center;
   justify-content: center;
+  margin: 20px;
+  text-align: center;
 }

@@ -8,11 +8,10 @@ const MainKeonrok = () => {
   return (
     <div className="mainKeonrok">
       <header className="mainHeader" />
-      <nav className="mainNav">
-        <div className="westagramLogo">
-          <img src="/images/keonrok/instagram.png" alt="westagram logo" />
-        </div>
-      </nav>
+      <nav className="mainNav" />
+      <div className="westagramLogo">
+        <img src="/images/keonrok/instagram.png" alt="westagram logo" />
+      </div>
       <div className="mainSection">
         <article>
           <div className="writer">
@@ -100,110 +99,115 @@ const MainKeonrok = () => {
             </div>
           </div>
         </article>
-        <aside />
-        <div className="asideHead">
-          <img
-            src="/images/keonrok/img_kr.jpg"
-            width="56px"
-            height="56px"
-            alt="img_kr 이미지"
-          />
-          <div className="asideHeadText">
-            <p>kr_shin</p>
-            <p>kr_shin | 신건록</p>
+        <aside>
+          <div className="asideHead">
+            <img
+              src="/images/keonrok/img_kr.jpg"
+              width="56px"
+              height="56px"
+              alt="img_kr 이미지"
+            />
+            <div className="asideHeadText">
+              <p>kr_shin</p>
+              <p>kr_shin | 신건록</p>
+            </div>
           </div>
-        </div>
-        <div className="asideBody">
-          <div className="asideBodyStory">
-            <span>스토리</span>
-            <p>모두보기</p>
+          <div className="asideBody">
+            <div className="asideBodyStory">
+              <span>스토리</span>
+              <p>모두보기</p>
+            </div>
+            <div className="asideBodyImgId">
+              <div className="asidehi">
+                <img
+                  src="/images/keonrok/mukim.png"
+                  width="32px"
+                  height="32px"
+                  alt="김마음 프로필이미지"
+                />
+                <div className="asidehi2">
+                  <span>heart_kim</span>
+                  <p>5시간 전</p>
+                </div>
+              </div>
+              <div className="asidehi">
+                <img
+                  src="/images/keonrok/krkim.png"
+                  width="32px"
+                  height="32px"
+                />
+                <div className="asidehi2">
+                  <span>ray_kim</span>
+                  <p>9분전</p>
+                </div>
+              </div>
+              <div className="asidehi">
+                <img
+                  src="/images/keonrok/khkang.png"
+                  width="32px"
+                  height="32px"
+                />
+                <div className="asidehi2">
+                  <span>kh_kang</span>
+                  <p>50분 전</p>
+                </div>
+              </div>
+              <div className="asidehi">
+                <img
+                  src="/images/keonrok/jeonil.png"
+                  width="32px"
+                  height="32px"
+                />
+                <div className="asidehi2">
+                  <span>jeonil_lee</span>
+                  <p>30분 전</p>
+                </div>
+              </div>
+            </div>
           </div>
-          <div className="asideBodyImgId">
-            <div className="asidehi">
+          <div className="asideTails">
+            <div className="asideTailsRecommend">
+              <span>회원님을 위한 추천</span>
+              <p>모두 보기</p>
+            </div>
+            <div className="asideTailsRecommend1">
               <img
-                src="/images/keonrok/mukim.png"
+                src="/images/keonrok/mskim.png"
                 width="32px"
                 height="32px"
-                alt="김마음 프로필이미지"
+                alt="김명성 프로필이미지"
               />
-              <div className="asidehi2">
-                <span>heart_kim</span>
-                <p>5시간 전</p>
+              <div className="asideTailsRecommend2">
+                <span>ms_kim</span>
+                <p>Front-End 개발자들이 팔로우 하고있습니다.</p>
               </div>
             </div>
-            <div className="asidehi">
-              <img src="/images/keonrok/krkim.png" width="32px" height="32px" />
-              <div className="asidehi2">
-                <span>ray_kim</span>
-                <p>9분전</p>
-              </div>
-            </div>
-            <div className="asidehi">
+            <div className="asideTailsRecommend1">
               <img
-                src="/images/keonrok/khkang.png"
+                src="/images/keonrok/jbkang.png"
                 width="32px"
                 height="32px"
+                alt="강종범 프로필이미지"
               />
-              <div className="asidehi2">
-                <span>kh_kang</span>
-                <p>50분 전</p>
+              <div className="asideTailsRecommend2">
+                <span>jongbeom_kang</span>
+                <p>Back-End 개발자들이 팔로우 하고있습니다.</p>
               </div>
             </div>
-            <div className="asidehi">
+            <div className="asideTailsRecommend1">
               <img
-                src="/images/keonrok/jeonil.png"
+                src="/images/keonrok/swhan.png"
                 width="32px"
                 height="32px"
+                alt="한신웅 프로필이미지"
               />
-              <div className="asidehi2">
-                <span>jeonil_lee</span>
-                <p>30분 전</p>
+              <div className="asideTailsRecommend2">
+                <span>sw_han</span>
+                <p>Front-End 개발자들이 팔로우 하고있습니다.</p>
               </div>
             </div>
           </div>
-        </div>
-        <div className="asideTails">
-          <div className="asideTailsRecommend">
-            <span>회원님을 위한 추천</span>
-            <p>모두 보기</p>
-          </div>
-          <div className="asideTailsRecommend1">
-            <img
-              src="/images/keonrok/mskim.png"
-              width="32px"
-              height="32px"
-              alt="김명성 프로필이미지"
-            />
-            <div className="asideTailsRecommend2">
-              <span>ms_kim</span>
-              <p>Front-End 개발자들이 팔로우 하고있습니다.</p>
-            </div>
-          </div>
-          <div className="asideTailsRecommend1">
-            <img
-              src="/images/keonrok/jbkang.png"
-              width="32px"
-              height="32px"
-              alt="강종범 프로필이미지"
-            />
-            <div className="asideTailsRecommend2">
-              <span>jongbeom_kang</span>
-              <p>Back-End 개발자들이 팔로우 하고있습니다.</p>
-            </div>
-          </div>
-          <div className="asideTailsRecommend1">
-            <img
-              src="/images/keonrok/swhan.png"
-              width="32px"
-              height="32px"
-              alt="한신웅 프로필이미지"
-            />
-            <div className="asideTailsRecommend2">
-              <span>sw_han</span>
-              <p>Front-End 개발자들이 팔로우 하고있습니다.</p>
-            </div>
-          </div>
-        </div>
+        </aside>
       </div>
       <div className="COMPANY_INFO">
         {COMPANY_INFO.map(information => {
