@@ -1,0 +1,20 @@
+[
+  {
+    "id": "1",
+    "nickname": "photo_stagram",
+    "image_url": "/images/jia/sea.png",
+    "content": "🌊✨동해 바다의 윤슬"
+  },
+  {
+    "id": "2",
+    "nickname": "drim_ing",
+    "image_url": "/images/jia/sea2.png",
+    "content": "출사 다니는 중인데"
+  },
+  {
+    "id": "3",
+    "nickname": "optimuswhang",
+    "image_url": "/images/jia/lp.png",
+    "content": "요즘 근황"
+  }
+]
