@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./MainKeonrok.scss";
+import { useNavigate } from "react-router-dom";
 
 const MainKeonrok = () => {
   const [isMoreViewOpen, setIsMoreViewOpen] = useState(false);
@@ -204,8 +205,29 @@ const MainKeonrok = () => {
           </div>
         </div>
       </div>
+      <div className="COMPANY_INFO">
+        {COMPANY_INFO.map(information => {
+          return <li key={information.id}>{information.title}</li>;
+        })}
+      </div>
     </div>
   );
 };
 
 export default MainKeonrok;
+
+// 상수데이터는 변하지 않기 때문에 컴포넌트 밖에 선언
+// COMPANY_INFO information의 의미 : COMPANY_INFO 내 title을 element로 인식
+const COMPANY_INFO = [
+  { id: 1, title: "소개" },
+  { id: 2, title: "도움말" },
+  { id: 3, title: "홍보 센터" },
+  { id: 4, title: "API" },
+  { id: 5, title: "채용 정보" },
+  { id: 6, title: "개인정보처리방침" },
+  { id: 7, title: "약관" },
+  { id: 8, title: "위치" },
+  { id: 9, title: "인기 계정" },
+  { id: 10, title: "해시태그" },
+  { id: 11, title: "언어" },
+];

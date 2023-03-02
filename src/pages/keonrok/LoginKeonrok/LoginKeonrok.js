@@ -1,17 +1,21 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import "./LoginKeonrok.scss";
+import { useNavigate } from "react-router-dom";
 
 const LoginKeonrok = () => {
   const [id, setId] = useState("");
   const [password, setPassword] = useState("");
 
+  const navigate = useNavigate();
+
   const handleIdInput = event => {
     setId(event.target.value);
+    console.log("ID 입력확인");
   };
 
   const handlePasswordInput = event => {
     setPassword(event.target.value);
+    console.log("PW 입력확인");
   };
 
   const [isActive, setIsActive] = useState(false);
@@ -20,6 +24,26 @@ const LoginKeonrok = () => {
     return id.includes("@") && password.length >= 5
       ? setIsActive(true)
       : setIsActive(false);
+  };
+
+  const Login = e => {
+    e.preventDefault();
+
+    fetch("http://10.58.52.65:8001/auth/signin", {
+      method: "POST",
+      headers: { "Content-Type": "application/json;charset=utf-8" },
+      body: JSON.stringify({
+        email: id,
+        password: password,
+      }),
+    }) //요청
+      .then(response => response.json())
+      .then(data => console.log(data));
+    //응답
+
+    if (isActive) {
+      navigate("/main-keonrok");
+    }
   };
 
   return (
@@ -50,6 +74,7 @@ const LoginKeonrok = () => {
             className={isActive ? "activeButton" : "unActiveButton"}
             type="button"
             disabled={id === "" || password === "" ? true : false}
+            onClick={Login}
           >
             로그인
           </button>
