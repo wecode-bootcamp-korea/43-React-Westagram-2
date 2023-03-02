@@ -16,7 +16,7 @@ const ArticleJia = () => {
 
   // fetch
   useEffect(() => {
-    fetch("/data/articleData.json", {
+    fetch("/data/articleDataJia.json", {
       method: "GET",
     })
       .then(res => res.json())
