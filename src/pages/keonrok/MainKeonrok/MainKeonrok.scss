@@ -1,0 +1,378 @@
+.mainHeader {
+  position: fixed;
+  width: 100%;
+  margin-bottom: 100px;
+  padding-bottom: 50px;
+  //background-color: aqua;
+}
+
+.mainNav {
+  position: fixed;
+  width: 100%;
+  height: 5px;
+  //background-color: yellow;
+}
+
+.westagramLogo {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  padding-left: 20px;
+  padding-top: 20px;
+  width: 50px;
+  height: 50px;
+}
+
+.about-logo {
+  width: 23px;
+  padding-top: 10px;
+}
+
+.headerContainer {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  height: 54px;
+  padding: 30px;
+  border-bottom: 1px solid rgba(var(--b6a, 219, 219, 219), 1);
+}
+
+.headerContents {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  padding: 0 90px;
+}
+
+.WestagramTag {
+  display: flex;
+}
+
+.WestagramTag a {
+  color: black;
+  font-family: "Lobster", cursive;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.headerSearchBar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 5px 5px 5px;
+  border: 1px solid rgba(var(--b6a, 219, 219, 219), 1);
+}
+
+input {
+  width: 230px;
+  padding: 5px;
+  border: none;
+}
+
+.headerRightImage {
+  font-size: 30px;
+}
+
+.headerRightImage a {
+  color: black;
+}
+
+.mainSection {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  padding-top: 15px;
+  gap: 50px;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  width: 614px;
+  height: 100%;
+  border: 1px solid rgba(var(--b6a, 219, 219, 219), 1);
+}
+
+.writer {
+  display: flex;
+  align-items: center;
+  justify-content: row;
+  padding: 10px 5px;
+}
+
+.writer img {
+  margin-left: 10px;
+  border-radius: 50%;
+}
+
+.writer span {
+  padding-left: 10px;
+  font-weight: bold;
+}
+
+.writer a {
+  padding-left: 420px;
+}
+
+.writeImage {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.reactionButton {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 10px;
+}
+
+.reactionButton button {
+  margin: 5px 0;
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+  font-size: 25px;
+}
+
+.writeReaction {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(var(--b6a, 219, 219, 219), 1);
+}
+
+.writeReaction img {
+  border-radius: 50%;
+}
+
+.writeReactionImg {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 5px;
+  padding-left: 10px;
+}
+
+.writeReactionImg span {
+  padding-left: 10px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.replyBox {
+  display: flex;
+  justify-content: row;
+  padding: 10px 0 10px 10px;
+}
+
+.surfSentence {
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  font-size: 15px;
+}
+
+.surfSentence span {
+  margin-right: 10px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.moreView {
+  padding-left: 10px;
+}
+
+.moreView a {
+  color: rgba(var(--b6a, 219, 219, 219), 1);
+  text-decoration: none;
+}
+
+.friendsSentence {
+  display: flex;
+  padding-left: 10px;
+}
+
+.friendsSentence span {
+  padding-right: 10px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.friendsSentence p {
+  font-size: 15px;
+}
+
+.time {
+  padding: 10px 0 10px 10px;
+  color: rgba(var(--b6a, 219, 219, 219), 1);
+  font-size: 15px;
+}
+
+.feedCommentContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1.3px;
+  border-top: 1px solid rgba(var(--b6a, 219, 219, 219), 1);
+}
+
+.feedComment {
+  width: 560px;
+  border: none;
+}
+
+.feedCommentContainer button {
+  border: 0;
+  outline: 0;
+  background-color: white;
+  color: rgba(var(--d69, 0, 149, 246), 1);
+}
+
+aside {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+}
+
+.asideHead {
+  display: flex;
+  align-items: center;
+  margin: 10px 0 10px 10px;
+}
+
+.asideHead img {
+  border-radius: 50%;
+}
+
+.asideHeadText {
+  flex-direction: column;
+  padding-left: 10px;
+  font-size: 13.3px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.asideBody {
+  display: flex;
+  width: 100%;
+  height: 50%;
+  flex-direction: column;
+  border: 1px solid rgba(var(--b6a, 219, 219, 219), 1);
+}
+
+.asideBodyStory {
+  display: flex;
+  justify-content: space-between;
+  padding: 1px 0;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.asideBodyStory span {
+  padding-left: 10px;
+  color: rgba(var(--b6a, 219, 219, 219), 1);
+}
+
+.asideBodyStory p {
+  padding-right: 10px;
+}
+
+.asideBodyImgId {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+.asideBodyImgId img {
+  border-radius: 50%;
+}
+
+.asidehi {
+  //display: flex;
+  margin: 10px 0 5px 0;
+  margin-left: 10px;
+}
+
+.asidehi2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 10px;
+}
+
+.asidehi img {
+  margin-left: 10px;
+}
+
+.asidehi span {
+  padding-bottom: 5px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.asidehi p {
+  color: rgba(var(--b6a, 219, 219, 219), 1);
+  font-size: 15px;
+}
+
+.asideTails {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 50%;
+  margin-top: 20px;
+  border: 1px solid rgba(var(--b6a, 219, 219, 219), 1);
+}
+
+.asideTails img {
+  border-radius: 50%;
+}
+
+.asideTailsRecommend {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.asideTailsRecommend span {
+  padding-left: 10px;
+  color: rgba(var(--b6a, 219, 219, 219), 1);
+}
+
+.asideTailsRecommend p {
+  padding-right: 10px;
+}
+
+.asideTailsRecommend1 {
+  //display: flex;
+  align-content: center;
+  align-items: flex-start;
+  justify-content: row;
+  margin: 10px 0 10px 10px;
+  text-align: left;
+}
+
+.asideTailsRecommend2 {
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+  font-size: 13.3px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.asideTailsRecommend2 p {
+  padding-top: 5px;
+  color: rgba(var(--b6a, 219, 219, 219), 1);
+}
+
+.COMPANY_INFO {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  margin: 20px;
+  text-align: center;
+}
