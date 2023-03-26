@@ -6,9 +6,18 @@ import "./MainJunyoung.scss";
 const MainJunyoung = () => {
   const [comment, setComment] = useState("");
   const [commentArray, setCommentArray] = useState([]);
+  // const [feedList, setFeedList] = useState([]);
+  // console.log(feedList); //확인 꼭 해주기
+
   const addComment = commentArray.map(commentArray => (
     <div key={commentArray.toString()}>{commentArray}</div>
   ));
+
+  // useEffect(() => {
+  //   fetch("/data/data.json")
+  //     .then(response => response.json())
+  //     .then(data => setFeedList(data));
+  // }, []);
 
   return (
     <main className="main">
@@ -256,7 +265,7 @@ const MainJunyoung = () => {
 
           <div className="sideWrap">
             <div className="sideWraps">
-              <div className="sideImg1" id="side-wrap-img1" />
+              <div className="sideImg1" />
               <div className="sideChilds">
                 <p className="recomName">NewMinji</p>
                 <p className="recomInfo">haerin님 외 7명이 팔...</p>
@@ -268,7 +277,7 @@ const MainJunyoung = () => {
 
           <div className="sideWrap">
             <div className="sideWraps">
-              <div className="sideImg2" id="side-wrap-img2" />
+              <div className="sideImg2" />
               <div className="sideChilds">
                 <p className="recomName">chae_0.0</p>
                 <p className="recomInfo">Ssoyoon님 외 4명이...</p>
@@ -292,6 +301,7 @@ const MainJunyoung = () => {
         </div>
 
         <div className="footerWrapper">
+          {/* <Aside /> */}
           {FOOTER_LIST.map(info => (
             <span key={info.id} className="footerContent">
               {info.title} ·{" "}

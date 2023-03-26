@@ -7,9 +7,7 @@ const CommentJunyoung = props => {
   const onChange = e => {
     setComment(e.target.value);
   };
-  const addComment = commentArray.map(commentArray => (
-    <div key={commentArray.toString()}>{commentArray}</div>
-  ));
+
   const onKeyUp = event => {
     if (event.key === "Enter") {
       setCommentArray([...commentArray, comment]);

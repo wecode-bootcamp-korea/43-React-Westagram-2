@@ -5,20 +5,44 @@ import "./LoginJunyoung.scss";
 const LoginJunyoung = () => {
   const navigate = useNavigate();
 
-  const goToMain = () => {
-    if (id.includes("@") && pw.length >= 5) {
-      navigate("/main-junyoung");
-    } else {
-      alert("아이디와 비밀번호를 다시 확인해주세요.");
+  const goToMain = event => {
+    // event.preventDefault();
+    // if (id.includes("@") && pw.length >= 5) {
+    //   fetch("http://10.58.52.56:3000/auth/signin", {
+    //     method: "POST",
+    //     headers: {
+    //       "Content-Type": "application/json;charset=utf-8",
+    //     },
+    //     body: JSON.stringify({
+    //       email: id,
+    //       password: pw,
+    //     }),
+    //   })
+    //     .then(response => response.json())
+    //     .then(data => {
+    //       if (data.accessToken) {
+    //         localStorage.setItem("token", data.accessToken);
+    //       } else {
+    //         alert("아이디와 비밀번호를 다시 확인해주세요!");
+    //       }
+    //     });
+    // }
+    navigate("/main-junyoung");
+    // } else {
+    // alert("아이디와 비밀번호를 다시 확인해주세요.");
+  };
+  const onKeyPress = e => {
+    if (e.key === "Enter") {
+      goToMain();
     }
   };
-
+  //onKeyPress 를 안쓸거면 form 태그로 바꿔주기
   const [id, setId] = useState("");
   const [pw, setPw] = useState("");
   const [active, setActive] = useState(false);
 
   function saveUserId(event) {
-    setId(event.target.value); //이걸 모르겠음
+    setId(event.target.value);
     // console.log("id", id);
   }
   const saveUserPw = event => {
@@ -31,17 +55,19 @@ const LoginJunyoung = () => {
       ? setActive(true)
       : setActive(false);
   };
+  //////////
 
   return (
     <div className="loginJunyoung">
       <div className="westagram">Westagram</div>
-      <form className="loginForm">
-        <form action="#none" className="loginWrap">
+      <div className="loginForm">
+        <div action="#none" className="loginWrap">
           <input
             className="loginId"
             type="text"
             placeholder="전화번호, 사용자 이름 또는 이메일"
             onKeyUp={activeBtn}
+            onKeyPress={onKeyPress}
             onChange={saveUserId}
           />
           <input
@@ -49,6 +75,7 @@ const LoginJunyoung = () => {
             type="password"
             placeholder="비밀번호"
             onKeyUp={activeBtn}
+            onKeyPress={onKeyPress}
             onChange={saveUserPw}
           />
           <div>
@@ -62,13 +89,13 @@ const LoginJunyoung = () => {
               로그인
             </button>
           </div>
-        </form>
+        </div>
         <div className="forgotPw">
           <a href="#!" className="pageMove">
             비밀번호를 잊으셨나요?
           </a>
         </div>
-      </form>
+      </div>
     </div>
   );
 };
