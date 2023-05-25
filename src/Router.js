@@ -14,7 +14,7 @@ const Router = () => {
         <Route path="/login-jia" element={<LoginJia />} />
         <Route path="/main-jia" element={<MainJia />} />
         <Route path="/login-junyoung" element={<LoginJunyoung />} />
-        <Route path="/main-junyoung" element={<MainJunyoung />} />
+        <Route path="/" element={<MainJunyoung />} />
         <Route path="/login-keonrok" element={<LoginKeonrok />} />
         <Route path="/main-keonrok" element={<MainKeonrok />} />
       </Routes>

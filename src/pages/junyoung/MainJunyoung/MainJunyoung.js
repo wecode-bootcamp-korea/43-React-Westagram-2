@@ -199,8 +199,6 @@ const MainJunyoung = () => {
             setCommentArray={setCommentArray}
           />
         </div>
-        {/* </div>
-        </div> */}
       </article>
       {/* 오른쪽 스토리부분 */}
       {/*사이드 오른쪽 부분  */}
