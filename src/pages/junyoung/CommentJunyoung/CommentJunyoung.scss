@@ -1,0 +1,27 @@
+.inputContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+  padding: 0 12px 0 12px;
+  border-top: 1px solid #efefef;
+
+  .addComment {
+    width: 100%;
+    // border-top: 1px solid #e6e6e6;
+    margin-top: 10px;
+    display: flex;
+    .inputComment {
+      border: none;
+      width: 100%;
+      background-color: #fafafa;
+      height: 30px;
+      outline: none;
+    }
+
+    button {
+      color: #bee1fd;
+      font-size: 14px;
+    }
+  }
+}
